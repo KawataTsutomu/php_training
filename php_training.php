@@ -23,12 +23,22 @@ print_r($array);
 echo PHP_EOL;
 ?>
 
-print("#####q3#####".PHP_EOL);
+<?php
+print("#####q3#####" . PHP_EOL);
+// 配列の中に 3 がいくつあるかを出力するコードを書き出力
 $numbers = [1, 5, 8, 10, 2, 3, 2, 3, 1, 4, 5, 9];
 
 # 以下に回答を記載
+$count = 0;
+foreach ($numbers as $number) {
+    if ($number === 3) {
+        $count++;
+    }
+}
 
+print_r($count . "回" . PHP_EOL);
 echo PHP_EOL;
+?>
 
 print("#####q4#####".PHP_EOL);
 $sports = ["サッカー", "フットサル", null, "野球", "バスケ", null, "バレー"];
