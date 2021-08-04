@@ -86,15 +86,18 @@ print_r($numbers2);
 echo PHP_EOL;
 ?>
 
-print("#####q7#####".PHP_EOL);
+<?php
+print("#####q7#####" . PHP_EOL);
+// 配列の要素を 文字列 から 数字 に変換し出力
 $array = ["1", "2", "3", "4", "5"];
 
 # 以下に回答を記載
+$array = array_map('intval', $array);
 
 # 以下は変更しないで下さい
 var_dump($array);
-
 echo PHP_EOL;
+?>
 
 print("#####q8#####".PHP_EOL);
 $programming_languages = ["php", "ruby", "python", "javascript"];
