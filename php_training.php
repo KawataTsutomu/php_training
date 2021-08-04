@@ -177,12 +177,15 @@ print_r($user_data);
 echo PHP_EOL;
 ?>
 
-print("#####q14#####".PHP_EOL);
+<?php
+print("#####q14#####" . PHP_EOL);
+// 次の連想配列から全てのキー（添字）を取り出して、キーが数字である通常の配列（添字配列）を作成し，出力して下さい。
 $data = ["name" => "satou", "age" => 33, "address" => "saitama", "hobby" => "soccer", "email" => "hoge@fuga.com"];
 
 # 以下に回答を記載
-
+print_r(array_values($data));
 echo PHP_EOL;
+?>
 
 print("#####q15#####".PHP_EOL);
 $data1 = ["name" => "saitou", "hobby" => "soccer", "age" => 33, "role" => "admin"];
