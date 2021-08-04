@@ -72,12 +72,19 @@ if (empty($array2)) {
 echo PHP_EOL;
 ?>
 
-print("#####q6#####".PHP_EOL);
+<?php
+print("#####q6#####" . PHP_EOL);
 $numbers1 = [1, 2, 3, 4, 5];
 
 # 以下に回答を記載
+$numbers2 = [];
+foreach ($numbers1 as $number) {
+    $numbers2[] = $number * 10;
+}
 
+print_r($numbers2);
 echo PHP_EOL;
+?>
 
 print("#####q7#####".PHP_EOL);
 $array = ["1", "2", "3", "4", "5"];
