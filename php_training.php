@@ -10,13 +10,18 @@ print_r($names);
 echo PHP_EOL;
 ?>
 
-print("#####q2#####".PHP_EOL);
+<?php
+print("#####q2#####" . PHP_EOL);
+// 次の二つの配列を合体させた新しい配列 $array を作成し出力
 $array1 = ["dog", "cat", "fish"];
 $array2 = ["bird", "bat", "tiger"];
 
 # 以下に回答を記載
+$array = array_merge($array1, $array2);
 
+print_r($array);
 echo PHP_EOL;
+?>
 
 print("#####q3#####".PHP_EOL);
 $numbers = [1, 5, 8, 10, 2, 3, 2, 3, 1, 4, 5, 9];
