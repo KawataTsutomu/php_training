@@ -40,12 +40,16 @@ print_r($count . "回" . PHP_EOL);
 echo PHP_EOL;
 ?>
 
-print("#####q4#####".PHP_EOL);
+<?php
+print("#####q4#####" . PHP_EOL);
+// 配列から null の要素を削除し出力(新しい配列は作らない)
 $sports = ["サッカー", "フットサル", null, "野球", "バスケ", null, "バレー"];
 
 # 以下に回答を記載
-
+$sports = array_diff($sports, [null]);
+print_r($sports);
 echo PHP_EOL;
+?>
 
 print("#####q5#####".PHP_EOL);
 $array1 = [];
