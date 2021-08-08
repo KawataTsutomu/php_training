@@ -143,12 +143,33 @@ foreach ($foods as $food) {
 echo PHP_EOL;
 ?>
 
-print("#####q11#####".PHP_EOL);
+<?php
+print("#####q11#####" . PHP_EOL);
+// 次の配列を用いて，期待する出力結果になるようにコードを書いて下さい。
 $sports = ["サッカー", "バスケ", "野球", ["フットサル", "野球"], "水泳", "ハンドボール", ["卓球", "サッカー", "ボルダリング"]];
 
 # 以下に回答を記載
+$sports2 = [];
+foreach ($sports as $sport) {
+    if (is_array($sport)) {
+        $sports2 = array_merge($sports2, $sport);
+    } else {
+        array_push($sports2, $sport);
+    }
+}
+$sports2 = array_unique($sports2);
+$sports2 = array_values($sports2);
+
+print_r("ユーザーの趣味一覧" . PHP_EOL);
+foreach ($sports2 as $key => $sport) {
+    $number = $key + 1;
+    $number = "No" . $number;
+    $sports2 = $number . " " . $sport . PHP_EOL;
+    print_r($sports2);
+}
 
 echo PHP_EOL;
+?>
 
 print("#####q12#####".PHP_EOL);
 $data = ["user" => ["name" => "satou", "age" => 33]];
