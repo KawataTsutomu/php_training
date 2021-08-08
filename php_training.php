@@ -110,12 +110,22 @@ print_r($upper_case_programming_languages);
 echo PHP_EOL;
 ?>
 
-print("#####q9#####".PHP_EOL);
+<?php
+print("#####q9#####" . PHP_EOL);
+// 次の配列を用いて，期待通りの出力結果になるようにコードを書いて下さい。
 $names = ["田中", "佐藤", "佐々木", "高橋"];
 
 # 以下に回答を記載
+$names2 = [];
+foreach ($names as $key => $name) {
+    $number = $key + 1;
+    $name = "会員No." . $number . " " . $name;
+    $names2[] = $name;
+}
 
+print_r($names2);
 echo PHP_EOL;
+?>
 
 print("#####q10#####".PHP_EOL);
 $foods = ["いか", "たこ", "うに", "しゃけ", "うにぎり", "うに軍艦", "うに丼", "高級なうに"];
