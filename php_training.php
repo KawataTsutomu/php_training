@@ -204,13 +204,27 @@ print_r($data);
 echo PHP_EOL;
 ?>
 
-print("#####q15#####".PHP_EOL);
+<?php
+print("#####q15#####" . PHP_EOL);
+// age というキーが含まれている場合は OK ，含まれていない場合は NG という文字列が出力されるコードを書いて下さい。
 $data1 = ["name" => "saitou", "hobby" => "soccer", "age" => 33, "role" => "admin"];
 $data2 = ["name" => "yamada", "hobby" => "baseball", "role" => "normal"];
 
 # 以下に回答を記載
+if (array_key_exists("age", $data1)) {
+    echo "OK" . PHP_EOL;
+} else {
+    echo "NG" . PHP_EOL;
+}
+
+if (array_key_exists("age", $data2)) {
+    echo "OK" . PHP_EOL;
+} else {
+    echo "NG" . PHP_EOL;
+}
 
 echo PHP_EOL;
+?>
 
 print("#####q16#####".PHP_EOL);
 $users = [
