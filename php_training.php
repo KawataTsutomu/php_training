@@ -242,3 +242,102 @@ foreach ($users as $user) {
 }
 echo PHP_EOL;
 ?>
+
+<?php
+print("#####q17#####" . PHP_EOL);
+// 次の Userクラス 内にinfoメソッドを追加し、期待する出力結果になるようにして下さい。
+class User
+{
+
+    // コードを追加
+    //プロパティ(変数)を宣言する
+    private $name;
+    private $age;
+    private $gender;
+
+    //コンストラクタメソッドを宣言
+    function __construct($user_name, $user_age, $user_gender)
+    {
+        $this->name = $user_name;
+        $this->age = $user_age;
+        $this->gender = $user_gender;
+    }
+
+    //出力
+    function info()
+    {
+        print("名前:" . $this->name . PHP_EOL);
+        print("年齢:" . $this->age . PHP_EOL);
+        print("性別:" . $this->gender . PHP_EOL);
+    }
+}
+
+$user1 = new User("神里", 32, "男");
+$user2 = new User("あじー", 32, "男");
+
+$user1->info();
+print("-------------" . PHP_EOL);
+$user2->info();
+
+echo PHP_EOL;
+?>
+
+print("#####q18#####".PHP_EOL);
+
+// コードを追加
+
+$man1 = new Man("あじー", 32);
+$man2 = new Man("ゆたぼん", 10);
+
+$man1->introduce();
+$man2->introduce();
+
+echo PHP_EOL;
+
+print("#####q19#####".PHP_EOL);
+class Item
+{
+// 以下を修正して下さい
+
+protected $name;
+
+function __construct($book_name){
+$this->name = $book_name;
+}
+}
+// 以下は変更しないで下さい
+
+$book = new Item("ゼロ秒思考");
+print($book->name.PHP_EOL);
+
+echo PHP_EOL;
+
+print("#####q20#####".PHP_EOL);
+class Human
+{
+
+// コードを追加
+
+}
+
+class Zoo
+{
+
+// コードを追加
+
+}
+
+$zoo = new Zoo("旭山動物園",["infant" => 0, "children" => 400, "adult" => 800, "senior" => 500]);
+
+$human1 = new Human("たま", 3);
+$human2 = new Human("ゆたぼん", 10);
+$human3 = new Human("あじー", 32);
+$human4 = new Human("ぎん", 108);
+
+$humans = [$human1, $human2, $human3, $human4];
+
+foreach ($humans as $human) {
+$zoo->info_entry_fee($human);
+}
+
+echo PHP_EOL;
