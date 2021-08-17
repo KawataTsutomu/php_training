@@ -21,12 +21,21 @@ print_r($array);
 echo PHP_EOL;
 ?>
 
-print("#####q3#####".PHP_EOL);
+<?php
+print("#####q3#####" . PHP_EOL);
+// 次の配列の中に 3 がいくつあるかを出力するコードを書き、出力して下さい。
 $numbers = [1, 5, 8, 10, 2, 3, 2, 3, 1, 4, 5, 9];
 
 // 以下に回答を記載
-
+$count = 0;
+foreach ($numbers as $number) {
+    if ($number === 3) {
+        $count++;
+    }
+}
+print_r($count . "個");
 echo PHP_EOL;
+?>
 
 print("#####q4#####".PHP_EOL);
 $sports = ["サッカー", "フットサル", null, "野球", "バスケ", null, "バレー"];
