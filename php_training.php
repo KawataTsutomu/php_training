@@ -48,13 +48,19 @@ print_r($sports);
 echo PHP_EOL;
 ?>
 
-print("#####q5#####".PHP_EOL);
+<?php
+print("#####q5#####" . PHP_EOL);
+// 配列が空であれば true、1 つ以上の要素があれば false を出力するコードを書いて下さい。
 $array1 = [];
 $array2 = [1, 5, 8, 10];
 
 // 以下に回答を記載
+var_export(empty($array1));
+echo PHP_EOL;
+var_export(empty($array2));
 
 echo PHP_EOL;
+?>
 
 print("#####q6#####".PHP_EOL);
 $numbers1 = [1, 2, 3, 4, 5];
