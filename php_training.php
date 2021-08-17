@@ -62,12 +62,21 @@ var_export(empty($array2));
 echo PHP_EOL;
 ?>
 
-print("#####q6#####".PHP_EOL);
+<?php
+print("#####q6#####" . PHP_EOL);
+// 次の配列から、期待された結果の配列 $numbers2 を作成し、出力して下さい
 $numbers1 = [1, 2, 3, 4, 5];
 
 // 以下に回答を記載
+$numbers2 = [];
+foreach ($numbers1 as $number) {
+    $number = $number * 10;
+    $numbers2[] = $number;
+}
 
+print_r($numbers2);
 echo PHP_EOL;
+?>
 
 print("#####q7#####".PHP_EOL);
 $array = ["1", "2", "3", "4", "5"];
