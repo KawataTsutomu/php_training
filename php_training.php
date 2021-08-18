@@ -167,12 +167,15 @@ foreach ($sports2 as $key => $sport) {
 echo PHP_EOL;
 ?>
 
-print("#####q12#####".PHP_EOL);
+<?php
+print("#####q12#####" . PHP_EOL);
+// 次の連想配列から name の値を出力して下さい。
 $data = ["user" => ["name" => "satou", "age" => 33]];
 
 // 以下に回答を記載
-
+print_r($data["user"]["name"]);
 echo PHP_EOL;
+?>
 
 print("#####q13#####".PHP_EOL);
 $user_data = ["name" => "神里", "age" => 31, "address" => "埼玉"];
